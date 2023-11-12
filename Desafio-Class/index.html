@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classe de um Jogo</title>
+</head>
+<body>
+  <script>
+    class Hero {
+  constructor (nome, idade, tipo, ataque) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
+
+  atacar () {
+    let ataque;
+    switch (this.tipo) {
+      case "mago":
+        ataque = "magia";
+        break;
+      case "guerreiro":
+        ataque = "espada";
+        break;
+      case "monge":
+        ataque = "artes marciais";
+        break;
+      case "ninja":
+        ataque = "shuriken";
+        break;
+      default:
+        ataque = "ataque indefinido"
+    }
+    console.log(`O ${this.tipo} atacou usando ${ataque}`);
+  }
+}
+
+let mago = new Hero('Gandalf', 70, 'mago');
+mago.atacar();
+  </script>
+</body>
+</html>
